@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react"
 import Navbar from "@/components/Navbar"
 import ClosingCTA from "@/components/ClosingCTA"
 import Footer from "@/components/Footer"
+import ContactForm from "@/components/ContactForm"
 
 export const metadata: Metadata = {
   title: "Iletisim",
@@ -60,7 +61,7 @@ export default function ContactPage() {
                       href="tel:+905357631907"
                       className="mt-2 block cursor-pointer text-lg font-semibold text-black"
                     >
-                      +90 535 763 19 07
+                      +90 535 763 19 08
                     </a>
                   </div>
                 </div>
@@ -89,71 +90,7 @@ export default function ContactPage() {
                 Bilgilerinizi bırakın, ekibimiz en kısa sürede size dönüş yapsın.
               </p>
 
-              <form className="mt-8 space-y-5">
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-slate-500">
-                      Ad Soyad
-                    </span>
-                    <input
-                      type="text"
-                      placeholder="Adınız Soyadınız"
-                      className="w-full rounded-xl border border-black/10 px-4 py-3 text-base text-black outline-none transition focus:border-[#e0ae1a]"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-slate-500">
-                      Firma
-                    </span>
-                    <input
-                      type="text"
-                      placeholder="Firma adı"
-                      className="w-full rounded-xl border border-black/10 px-4 py-3 text-base text-black outline-none transition focus:border-[#e0ae1a]"
-                    />
-                  </label>
-                </div>
-
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-slate-500">
-                      E-posta
-                    </span>
-                    <input
-                      type="email"
-                      placeholder="ornek@firma.com"
-                      className="w-full rounded-xl border border-black/10 px-4 py-3 text-base text-black outline-none transition focus:border-[#e0ae1a]"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-slate-500">
-                      Telefon
-                    </span>
-                    <input
-                      type="tel"
-                      placeholder="+90 5xx xxx xx xx"
-                      className="w-full rounded-xl border border-black/10 px-4 py-3 text-base text-black outline-none transition focus:border-[#e0ae1a]"
-                    />
-                  </label>
-                </div>
-
-                <label className="block">
-                  <span className="mb-2 block text-sm font-semibold text-slate-500">
-                    Mesajınız
-                  </span>
-                  <textarea
-                    rows={6}
-                    placeholder="Şantiye sayınız, ekip yapınız veya görmek istediğiniz modülleri yazabilirsiniz."
-                    className="w-full rounded-xl border border-black/10 px-4 py-3 text-base text-black outline-none transition focus:border-[#e0ae1a]"
-                  />
-                </label>
-
-                <button
-                  type="submit"
-                  className="cursor-pointer rounded-xl bg-[#f4c542] px-8 py-4 text-base font-bold text-black transition hover:bg-[#e0ae1a]"
-                >
-                  Formu Gönder
-                </button>
-              </form>
+              <ContactForm />
             </section>
           </div>
         </div>
