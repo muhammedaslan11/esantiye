@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 
@@ -25,10 +26,15 @@ export default function Navbar() {
       )}
     >
       <div className="flex items-center justify-between">
-        <Link href="/" className="flex cursor-pointer items-center gap-2">
-          <span className="text-lg font-extrabold tracking-tight text-black sm:text-xl">
-            E-ŞANTİYE
-          </span>
+        <Link href="/" className="flex cursor-pointer items-center">
+          <Image
+            src="/logo/logo.png"
+            alt="E-Şantiye"
+            width={120}
+            height={48}
+            className="h-10 w-auto object-contain sm:h-14"
+            priority
+          />
         </Link>
         <div>
           <Link

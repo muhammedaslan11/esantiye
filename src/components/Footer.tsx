@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -42,9 +43,13 @@ export default function Footer() {
       <div className="container mx-auto max-w-[88rem] px-5 sm:px-8">
         <div className="footer-reveal flex min-h-20 flex-col items-center justify-between gap-6 text-xs font-semibold text-saha-gray sm:min-h-24 sm:text-sm md:flex-row">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
-            <span className="font-extrabold text-black text-base sm:text-lg">
-              E-ŞANTİYE
-            </span>
+            <Image
+              src="/logo/logo.png"
+              alt="E-Şantiye"
+              width={100}
+              height={40}
+              className="h-8 w-auto object-contain sm:h-12"
+            />
             <span className="opacity-70">© 2026 Tüm hakları saklıdır.</span>
           </div>
 
