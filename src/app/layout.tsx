@@ -54,6 +54,10 @@ export const metadata: Metadata = {
     "mobil santiye",
     "E-Santiye",
   ],
+  icons: {
+    icon: "/logo/favicon.ico",
+    shortcut: "/logo/favicon.ico",
+  },
   alternates: {
     canonical: "/",
   },
