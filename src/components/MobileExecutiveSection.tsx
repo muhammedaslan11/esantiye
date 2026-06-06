@@ -8,15 +8,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 const features = [
   {
     title: "3D İlerleme Çubuğu",
-    description: "Projenin fiziksel ilerlemesini kat ve blok bazında tek bakışta görün.",
+    description: "Projenin fiziksel ilerlemesini 3D model üzerinde görün.",
   },
   {
     title: "Gömülü Excel Teknolojisi",
-    description: "Alışık olduğunuz Excel esnekliği, merkezi veri yapısı ile birlikte çalışır.",
+    description: "Alışık olduğunuz Excel esnekliği, veritabanı gücüyle birleşti.",
   },
   {
     title: "Log Kayıtları",
-    description: "Kim, ne zaman, hangi veriyi girdi; tüm hareketler geriye dönük izlenir.",
+    description: "Kim, ne zaman, hangi veriyi girdi? Geriye dönük %100 izlenebilirlik.",
   },
 ]
 
@@ -48,29 +48,29 @@ export default function MobileExecutiveSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="px-5 py-10 sm:px-8 sm:py-14">
-      <div className="mx-auto grid max-w-[88rem] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-        <div className="mobile-exec-reveal rounded-xl bg-[#fffdf7] p-7 sm:p-9 lg:p-10">
-          <div className="mb-8 flex items-center gap-4">
-            <div className="flex size-11 items-center justify-center rounded-xl bg-[#fff1c9] text-saha-accent-strong">
-              <Boxes className="size-5" />
+    <section ref={sectionRef} className="bg-white px-5 py-14 sm:px-8 sm:py-20">
+      <div className="mx-auto grid max-w-[88rem] items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="mobile-exec-reveal rounded-2xl border border-slate-100 bg-[#f9f8f6] p-7 sm:p-10">
+          <div className="mb-8 flex items-center gap-3">
+            <div className="flex size-9 items-center justify-center rounded-lg bg-[#fff1c9] text-saha-accent-strong">
+              <Boxes className="size-4" />
             </div>
-            <div className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
+            <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
               Teknik Üstünlük
             </div>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-7">
             {features.map((feature) => (
               <div key={feature.title} className="flex items-start gap-4">
-                <div className="mt-1 flex size-8 shrink-0 items-center justify-center rounded-full bg-[#fff1c9] text-saha-accent-strong">
-                  <Zap className="size-4" />
+                <div className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full bg-[#fff1c9] text-saha-accent-strong">
+                  <Zap className="size-3.5" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold tracking-[-0.03em] text-black">
+                  <h3 className="text-base font-bold tracking-[-0.01em] text-black">
                     {feature.title}
                   </h3>
-                  <p className="mt-2 text-lg leading-8 text-slate-600">
+                  <p className="mt-1 text-sm leading-6 text-slate-500">
                     {feature.description}
                   </p>
                 </div>
@@ -80,31 +80,30 @@ export default function MobileExecutiveSection() {
         </div>
 
         <div className="mobile-exec-reveal">
-          <h2 className="text-4xl font-semibold tracking-[-0.05em] text-black sm:text-5xl lg:text-7xl">
+          <h2 className="text-4xl font-extrabold leading-tight tracking-[-0.03em] text-black sm:text-5xl lg:text-6xl">
             Saha Şefi için Mobil,
             <br />
             <span className="text-saha-accent-strong">CEO için Dashboard.</span>
           </h2>
 
-          <p className="mt-8 max-w-2xl text-xl leading-9 text-slate-600">
-            Veri sahadan girilir, karar ofisten verilir. E-Şantiye bu iki dünyayı
+          <p className="mt-6 max-w-lg text-lg leading-8 text-slate-500">
+            Veri sahadan girilir, karar ofisten verilir. Sahatakip bu iki dünyayı
             saniyeler içinde birleştirir.
           </p>
 
-          <div className="mt-10 flex items-center gap-5">
+          <div className="mt-8 flex items-center gap-4">
             <div className="flex -space-x-3">
-              <div className="size-14 rounded-full border-2 border-white bg-[linear-gradient(135deg,#d6d3d1,#78716c)]" />
-              <div className="size-14 rounded-full border-2 border-white bg-[linear-gradient(135deg,#fde68a,#f59e0b)]" />
-              <div className="size-14 rounded-full border-2 border-white bg-[linear-gradient(135deg,#86efac,#15803d)]" />
-              <div className="size-14 rounded-full border-2 border-white bg-[linear-gradient(135deg,#bfdbfe,#2563eb)]" />
+              <div className="size-11 rounded-full border-2 border-white bg-[linear-gradient(135deg,#a8a29e,#57534e)]" />
+              <div className="size-11 rounded-full border-2 border-white bg-[linear-gradient(135deg,#fcd34d,#d97706)]" />
+              <div className="size-11 rounded-full border-2 border-white bg-[linear-gradient(135deg,#6ee7b7,#059669)]" />
             </div>
 
             <div>
-              <div className="text-2xl font-semibold tracking-[-0.03em] text-black">
-                120+ Firma
+              <div className="text-base font-bold tracking-[-0.01em] text-black">
+                60+ Firma
               </div>
-              <div className="mt-1 text-lg text-slate-500">
-                E-Şantiye ile operasyonunu kontrol altına aldı.
+              <div className="text-sm text-slate-400">
+                Sahatakip ile kontrolü ele aldı.
               </div>
             </div>
           </div>

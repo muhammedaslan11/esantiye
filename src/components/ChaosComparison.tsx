@@ -1,22 +1,22 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { AlertCircle, CheckCircle2, CircleX } from "lucide-react"
+import { AlertCircle, CircleX, ShieldCheck, ShieldCheckIcon } from "lucide-react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const painPoints = [
   "1 hafta gecikmiş WhatsApp mesajları",
   "Takip edilemeyen beton ve demir fireleri",
-  "Şantiyede kaybolan fişler ve ekler",
-  "Proje bitince fark edilen operasyon zararı",
+  "Şantiyede kaybolan kağıt fişler",
+  "Proje bitince öğrenilen zarar",
 ]
 
 const controlPoints = [
-  "Anlık blok, kat ve malzeme görünürlüğü",
-  "Tek ekranda çoklu şantiye operasyon takibi",
-  "5 dakikada dijital raporlama ve paylaşım",
-  "Tarayıcı içi Office erişimi ve merkezi arşiv",
+  "Anlık beton ve demir fire analizi",
+  "Tek ekranda 10+ şantiye takibi",
+  "5 dakikalık dijital raporlama",
+  "%100 KVKK uyumlu dijital arşiv",
 ]
 
 export default function ChaosComparison() {
@@ -63,81 +63,64 @@ export default function ChaosComparison() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="px-5 pb-8 pt-4 sm:px-8 sm:pb-10">
+    <section ref={sectionRef} className="bg-[#f5f5f5] px-5 py-16 sm:px-8 sm:py-20">
       <div className="mx-auto max-w-[88rem]">
-        <div className="rounded-xl bg-[#fffaf0] px-6 py-14 text-black sm:px-10 sm:py-16 lg:px-16">
-          <div className="chaos-header mx-auto max-w-4xl text-center">
-            <h2 className="max-w-5xl text-4xl font-semibold tracking-[-0.04em] text-black sm:text-5xl lg:text-6xl">
-              Patron kararlarını bir haftalık{" "}
-              <span className="text-saha-accent-strong">WhatsApp mesajlarıyla</span> alıyor.
-            </h2>
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl">
-              Gecikmiş raporlar, kayıp fişler, dağınık Excel dosyaları ve sözlü takip
-              yüzünden operasyon görünmez hale gelir. E-Şantiye bu kaosu tek merkezde
-              kontrol edilebilir bir düzene çevirir.
-            </p>
-          </div>
+        <div className="chaos-header mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-bold tracking-[-0.03em] text-black sm:text-5xl lg:text-6xl">
+            Patron kararlarını bir haftalık{" "}
+            <span className="text-saha-accent-strong">WhatsApp mesajlarıyla</span> alıyor.
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg">
+            Gecikmiş raporlar, kayıp fişler ve takip edilemeyen fireler...
+            <br />
+            İnşaatın kaosu kâr marjınızı eritiyor.
+          </p>
+        </div>
 
-          <div className="chaos-grid mt-12 grid gap-5 lg:grid-cols-2">
-            <article className="chaos-card rounded-xl bg-white p-7 sm:p-8">
-              <div className="flex items-center gap-4">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#fff1f2] text-[#ef4444]">
-                  <CircleX className="size-5" />
-                </div>
-                <div>
-                  <p className="text-3xl font-semibold tracking-[-0.03em] text-black">
-                    Eski Dünya (Kaos)
-                  </p>
-                  <p className="mt-2 text-base text-slate-500">
-                    Bilgi kişilere, mesajlara ve dağınık dosyalara bağlı kalır.
-                  </p>
-                </div>
+        <div className="chaos-grid mt-14 grid gap-5 lg:grid-cols-2">
+          <article className="chaos-card rounded-2xl bg-white p-8 shadow-sm sm:p-10">
+            <div className="flex items-center gap-4">
+              <div className="flex size-11 items-center justify-center rounded-full bg-[#fff1f2] text-[#ef4444]">
+                <CircleX className="size-5" />
               </div>
+              <p className="text-2xl font-bold tracking-[-0.02em] text-black">
+                Eski Dünya (Kaos)
+              </p>
+            </div>
 
-              <ul className="mt-10 space-y-5">
-                {painPoints.map((item) => (
-                  <li key={item} className="flex items-start gap-4 text-lg text-slate-600">
-                    <span className="mt-0.5 flex size-6 items-center justify-center rounded-full bg-[#fff1f2] text-[#ef4444]">
-                      <AlertCircle className="size-4" />
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
+            <ul className="mt-8 space-y-5">
+              {painPoints.map((item) => (
+                <li key={item} className="flex items-center gap-4 text-base text-slate-600">
+                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-[#fff1f2] text-[#ef4444]">
+                    <AlertCircle className="size-3.5" />
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
 
-            <article className="chaos-card rounded-xl bg-[#fff4db] p-7 sm:p-8">
-              <div className="flex items-center gap-4">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-[#ffe7ab] text-saha-accent-strong">
-                  <CheckCircle2 className="size-5" />
-                </div>
-                <div>
-                  <p className="text-3xl font-semibold tracking-[-0.03em] text-saha-accent-strong">
-                    E-Şantiye (Kontrol)
-                  </p>
-                  <p className="mt-2 text-base text-slate-600">
-                    Operasyon, doküman ve raporlama tek platformda izlenir.
-                  </p>
-                </div>
+          <article className="chaos-card rounded-2xl bg-[#fdf6e3] p-8 shadow-sm sm:p-10">
+            <div className="flex items-center gap-4">
+              <div className="flex size-11 items-center justify-center rounded-full bg-[#fde68a] text-[#b45309]">
+                <ShieldCheckIcon className="size-5" />
               </div>
+              <p className="text-2xl font-bold tracking-[-0.02em] text-[#b45309]">
+                SahaTakip (Kontrol)
+              </p>
+            </div>
 
-              <ul className="mt-10 space-y-5">
-                {controlPoints.map((item) => (
-                  <li key={item} className="flex items-start gap-4 text-lg text-slate-700">
-                    <span className="mt-0.5 flex size-6 items-center justify-center rounded-full bg-[#ffe7ab] text-saha-accent-strong">
-                      <CheckCircle2 className="size-4" />
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-10 rounded-xl bg-white px-5 py-4 text-sm text-slate-600">
-                Şantiye kararları sahadan gelen dağınık mesajlarla değil; dashboard,
-                OnlyOffice belgeleri ve canlı hareket kayıtlarıyla alınır.
-              </div>
-            </article>
-          </div>
+            <ul className="mt-8 space-y-5">
+              {controlPoints.map((item) => (
+                <li key={item} className="flex items-center gap-4 text-base text-slate-700">
+                  <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-[#fde68a] text-[#b45309]">
+                    <ShieldCheck className="size-3.5" />
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
         </div>
       </div>
     </section>

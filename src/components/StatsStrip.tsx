@@ -55,23 +55,22 @@ export default function StatsStrip() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-[#151515] px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
+    <section ref={sectionRef} className="bg-[#111111] px-5 py-20 sm:px-8 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-[88rem]">
-        <div className="stats-header mx-auto max-w-5xl text-center">
-          <h2 className="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
+        <div className="stats-header mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-extrabold leading-tight tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
             Türkiye&apos;de koordinasyon eksikliği yılda{" "}
-            <span className="text-saha-accent-strong">4.7 Milyar TL&apos;ye</span> mal
-            oluyor.
+            <span className="text-saha-accent-strong">4.7 Milyar TL&apos;ye</span> mal oluyor.
           </h2>
         </div>
 
-        <div className="stats-grid mt-16 grid gap-12 text-center sm:grid-cols-2 xl:mt-20 xl:grid-cols-4">
+        <div className="stats-grid mt-20 grid gap-10 text-center sm:grid-cols-2 xl:mt-24 xl:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label} className="stats-item">
-              <div className="text-5xl font-semibold tracking-[-0.04em] text-saha-accent-strong sm:text-6xl">
+              <div className="text-7xl font-extrabold tracking-[-0.04em] text-saha-accent-strong sm:text-8xl">
                 {stat.value}
               </div>
-              <div className="mt-4 text-sm font-semibold tracking-[0.22em] text-white/48">
+              <div className="mt-4 text-xs font-bold tracking-[0.25em] text-white/55">
                 {stat.label}
               </div>
             </div>
