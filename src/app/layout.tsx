@@ -8,24 +8,40 @@ const structuredData = {
   "@graph": [
     {
       "@type": "Organization",
-      name: "E-SANTIYE",
+      name: "E-Şantiye",
       url: siteUrl,
+      logo: `${siteUrl}/logo/logo.png`,
       email: "hello@esantiye.com",
       telephone: "+90 535 763 19 07",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Istanbul",
+        addressLocality: "İstanbul",
         addressCountry: "TR",
       },
+      sameAs: [],
     },
     {
       "@type": "WebSite",
-      name: "E-SANTIYE",
+      name: "E-Şantiye",
       url: siteUrl,
       inLanguage: "tr-TR",
       publisher: {
         "@type": "Organization",
-        name: "E-SANTIYE",
+        name: "E-Şantiye",
+      },
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "E-Şantiye",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web, iOS, Android",
+      url: siteUrl,
+      description:
+        "Şantiye fire takibi, mobil saha girişi ve CEO dashboard'u tek platformda birleştiren inşaat yönetim yazılımı.",
+      offers: {
+        "@type": "Offer",
+        availability: "https://schema.org/InStock",
+        priceCurrency: "TRY",
       },
     },
   ],
@@ -39,20 +55,24 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "E-SANTIYE | Santiyede Gorunmez Kayiplara Son",
-    template: "%s | E-SANTIYE",
+    default: "E-Şantiye | İnşaat Şantiye Yönetim Platformu",
+    template: "%s | E-Şantiye",
   },
   description:
-    "E-Santiye, saha ekipleri ve merkez ofis icin gelistirilmis insaat yonetim platformudur. Is programi, gorev, raporlama ve saha koordinasyonunu tek noktada toplar.",
+    "E-Şantiye ile şantiyenizde beton ve demir fire kayıplarını anlık takip edin. Mobil saha girişi, CEO dashboard ve 5 dakikada dijital raporlama. Türkiye'nin inşaat yönetim platformu.",
   keywords: [
-    "insaat yonetim platformu",
-    "santiye yonetimi",
-    "saha takibi",
-    "insaat yazilimi",
-    "proje yonetimi",
-    "is programi",
-    "mobil santiye",
-    "E-Santiye",
+    "şantiye yönetim yazılımı",
+    "inşaat takip programı",
+    "beton fire takibi",
+    "demir fire analizi",
+    "santiye yönetim sistemi",
+    "mobil şantiye uygulaması",
+    "inşaat proje yönetimi",
+    "E-Şantiye",
+    "dijital şantiye",
+    "KVKK uyumlu inşaat yazılımı",
+    "şantiye raporlama",
+    "inşaat yazılımı Türkiye",
   ],
   icons: {
     icon: "/logo/favicon.ico",
@@ -60,21 +80,31 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+    languages: {
+      "tr-TR": "/",
+    },
   },
   openGraph: {
-    title: "E-SANTIYE | Santiyede Gorunmez Kayiplara Son",
+    title: "E-Şantiye | Şantiyenizin Kontrolü Artık Elinizde",
     description:
-      "Saha-first insaat yonetim platformu ile ekiplerinizi hizlandirin, hatalari azaltin ve proje kontrolunu artirin.",
+      "Gecikmiş raporlar, kayıp fişler ve takip edilemeyen fireler tarihe karışıyor. 10+ şantiyeyi tek ekranda yönetin, anlık fire analizi yapın.",
     url: siteUrl,
-    siteName: "E-SANTIYE",
+    siteName: "E-Şantiye",
     locale: "tr_TR",
     type: "website",
+    images: [
+      {
+        url: "/logo/logo.png",
+        alt: "E-Şantiye - İnşaat Şantiye Yönetim Platformu",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
-    title: "E-SANTIYE",
+    card: "summary_large_image",
+    title: "E-Şantiye | İnşaat Şantiye Yönetim Platformu",
     description:
-      "Insaat projeleri icin saha odakli yonetim, raporlama ve koordinasyon platformu.",
+      "Beton ve demir fire takibi, mobil saha girişi ve CEO dashboard'u tek platformda. Türkiye'nin inşaat teknolojisi.",
+    images: ["/logo/logo.png"],
   },
   robots: {
     index: true,

@@ -106,7 +106,7 @@ export default function ChaosComparison() {
                 <ShieldCheckIcon className="size-5" />
               </div>
               <p className="text-2xl font-bold tracking-[-0.02em] text-[#b45309]">
-                SahaTakip (Kontrol)
+                E-Şantiye (Kontrol)
               </p>
             </div>
 

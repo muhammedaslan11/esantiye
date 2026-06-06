@@ -87,7 +87,7 @@ export default function MobileExecutiveSection() {
           </h2>
 
           <p className="mt-6 max-w-lg text-lg leading-8 text-slate-500">
-            Veri sahadan girilir, karar ofisten verilir. Sahatakip bu iki dünyayı
+            Veri sahadan girilir, karar ofisten verilir. E-Şantiye bu iki dünyayı
             saniyeler içinde birleştirir.
           </p>
 
@@ -103,7 +103,7 @@ export default function MobileExecutiveSection() {
                 60+ Firma
               </div>
               <div className="text-sm text-slate-400">
-                Sahatakip ile kontrolü ele aldı.
+                E-Şantiye ile kontrolü ele aldı.
               </div>
             </div>
           </div>
